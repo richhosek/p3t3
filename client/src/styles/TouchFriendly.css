@@ -1,0 +1,28 @@
+@media (max-width: 767px) {
+  /* Increase touch target sizes */
+  button, .btn, .control-button, .answer-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve spacing for touch */
+  .crossword-cell, .memory-card {
+    margin: 1px;
+  }
+  
+  /* Better text readability */
+  body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  
+  /* Prevent horizontal scroll */
+  * {
+    box-sizing: border-box;
+  }
+  
+  .container, .study-container, .crossword-container, .memory-game-container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,821 @@
+/* Stats.css - Comprehensive Stats Page Styles */
+
+/* ===== MAIN STATS PAGE LAYOUT ===== */
+.stats-page-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem 0;
+}
+
+.stats-content-wrapper {
+  max-width: 112rem; /* 7xl equivalent */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .stats-content-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-content-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+/* ===== HEADER SECTION ===== */
+.stats-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.stats-main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.stats-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* ===== NAVIGATION TABS ===== */
+.stats-nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.25rem;
+}
+
+.stats-tab-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.stats-tab-button:hover {
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+.stats-tab-button.active {
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stats-tab-button.active.blue {
+  background-color: #3b82f6;
+}
+
+.stats-tab-button.active.green {
+  background-color: #10b981;
+}
+
+.stats-tab-button.active.purple {
+  background-color: #8b5cf6;
+}
+
+.stats-tab-button.active.orange {
+  background-color: #f59e0b;
+}
+
+.stats-tab-button:not(.active) {
+  color: #6b7280;
+}
+
+/* ===== GRID LAYOUTS ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid.md-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid.lg-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stats-grid.full-span {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .stats-grid.md-full-span {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ===== STAT CARDS ===== */
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient backgrounds for overview cards */
+.stat-card.gradient-blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+}
+
+.stat-card.gradient-green {
+  background: linear-gradient(135deg, #10b981, #047857);
+  color: white;
+}
+
+.stat-card.gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+}
+
+.stat-card.gradient-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.stat-card.gradient-indigo {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+.stat-card.gradient-yellow {
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  color: white;
+}
+
+/* White cards with borders */
+.stat-card.white {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===== STAT CARD CONTENT ===== */
+.stat-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.stat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-weight: 500;
+}
+
+.stat-value {
+  font-weight: 700;
+}
+
+/* Colored stat values */
+.stat-value.green { color: #10b981; }
+.stat-value.blue { color: #3b82f6; }
+.stat-value.orange { color: #f59e0b; }
+.stat-value.yellow { color: #eab308; }
+.stat-value.red { color: #ef4444; }
+.stat-value.purple { color: #8b5cf6; }
+
+/* ===== ACHIEVEMENT SECTION ===== */
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievement-icon {
+  margin-right: 0.5rem;
+}
+
+.achievement-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== PROGRESS INSIGHTS ===== */
+.progress-insights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .progress-insights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.insight-item {
+  text-align: center;
+}
+
+.insight-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.insight-value.green { color: #10b981; }
+.insight-value.blue { color: #3b82f6; }
+.insight-value.purple { color: #8b5cf6; }
+
+.insight-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ===== HIGH SCORES SECTION ===== */
+.high-scores-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .high-scores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.score-card {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.score-card.green-bg {
+  background-color: #f0fdf4;
+}
+
+.score-card.yellow-bg {
+  background-color: #fefce8;
+}
+
+.score-card.red-bg {
+  background-color: #fef2f2;
+}
+
+.score-card.blue-bg {
+  background-color: #eff6ff;
+}
+
+.score-difficulty {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.score-difficulty.green { color: #16a34a; }
+.score-difficulty.yellow { color: #ca8a04; }
+.score-difficulty.red { color: #dc2626; }
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.score-value.green { color: #15803d; }
+.score-value.yellow { color: #a16207; }
+.score-value.red { color: #b91c1c; }
+
+.score-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ===== MASTERY METRICS ===== */
+.mastery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mastery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mastery-item {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.mastery-item.red-bg {
+  background-color: #fef2f2;
+}
+
+.mastery-item.blue-bg {
+  background-color: #eff6ff;
+}
+
+.mastery-item.green-bg {
+  background-color: #f0fdf4;
+}
+
+.mastery-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mastery-value.red { color: #dc2626; }
+.mastery-value.blue { color: #2563eb; }
+.mastery-value.green { color: #16a34a; }
+
+.mastery-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.mastery-sublabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.stats-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.action-button.blue {
+  background-color: #3b82f6;
+}
+
+.action-button.blue:hover {
+  background-color: #2563eb;
+}
+
+.action-button.red {
+  background-color: #ef4444;
+}
+
+.action-button.red:hover {
+  background-color: #dc2626;
+}
+
+/* ===== FOOTER ===== */
+.stats-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* ===== LOADING STATES ===== */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 8rem;
+  height: 8rem;
+  border: 0.5rem solid #e5e7eb;
+  border-top: 0.5rem solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.loading-text {
+  font-size: 1.125rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== ENHANCED GAME STYLES (from previous CSS) ===== */
+
+/* Flashcard Game Enhanced Styles */
+.study-complete-container {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+.performance-feedback {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.feedback-excellent {
+  background: rgba(34, 197, 94, 0.2);
+  border: 2px solid #22c55e;
+}
+
+.feedback-good {
+  background: rgba(59, 130, 246, 0.2);
+  border: 2px solid #3b82f6;
+}
+
+.feedback-okay {
+  background: rgba(251, 191, 36, 0.2);
+  border: 2px solid #fbbf24;
+}
+
+.feedback-needs-work {
+  background: rgba(239, 68, 68, 0.2);
+  border: 2px solid #ef4444;
+}
+
+.feedback-icon {
+  font-size: 1.5rem;
+}
+
+.btn-stats {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-stats:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.stat-cards {
+  color: #667eea;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+/* Crossword Enhanced Styles */
+.game-status-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.mini-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.mini-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.mini-stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.mini-stat-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.timer-motivation {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.clues-stats {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-top: 3px solid #007bff;
+}
+
+.stats-title {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.completion-check {
+  color: #22c55e;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.view-stats-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.view-stats-button:hover {
+  transform: translateY(-1px);
+}
+
+.hint-info {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
+}
+
+.hint-note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Matching Game Enhanced Styles */
+.modal-performance {
+  margin: 1.5rem 0;
+}
+
+.performance-excellent,
+.performance-good,
+.performance-okay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.performance-excellent {
+  background: linear-gradient(135deg, #fef3c7, #fbbf24);
+  color: #92400e;
+}
+
+.performance-good {
+  background: linear-gradient(135deg, #dbeafe, #3b82f6);
+  color: #1e40af;
+}
+
+.performance-okay {
+  background: linear-gradient(135deg, #f3e8ff, #8b5cf6);
+  color: #5b21b6;
+}
+
+.performance-icon {
+  font-size: 1.5rem;
+}
+
+.btn-tertiary {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-tertiary:hover {
+  background: #4b5563;
+}
+
+/* Stats Page Specific Enhancements */
+.stat-card-green,
+.stat-card-red,
+.stat-card-blue,
+.stat-card-purple,
+.stat-card-orange,
+.stat-card-indigo {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card-green:hover,
+.stat-card-red:hover,
+.stat-card-blue:hover,
+.stat-card-purple:hover,
+.stat-card-orange:hover,
+.stat-card-indigo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number-green { color: #22c55e; }
+.stat-number-red { color: #ef4444; }
+.stat-number-blue { color: #3b82f6; }
+.stat-number-purple { color: #8b5cf6; }
+.stat-number-orange { color: #f97316; }
+.stat-number-indigo { color: #6366f1; }
+
+.stat-label-green { color: #16a34a; }
+.stat-label-red { color: #dc2626; }
+.stat-label-blue { color: #2563eb; }
+.stat-label-purple { color: #7c3aed; }
+.stat-label-orange { color: #ea580c; }
+.stat-label-indigo { color: #4f46e5; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mini-stats {
+    gap: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .high-scores-grid,
+  .mastery-grid,
+  .progress-insights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .high-scores-grid,
+  .mastery-grid,
+  .progress-insights {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-nav-tabs {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .stats-tab-button {
+    width: 100%;
+  }
+}
+
+/* Animation for stats updates */
+@keyframes statUpdate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.stat-value-updated {
+  animation: statUpdate 0.3s ease-in-out;
+}
+
+/* Loading states */
+.loading-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.loading-stats::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 1rem;
+}
+
+/* Utility classes for spacing */
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}

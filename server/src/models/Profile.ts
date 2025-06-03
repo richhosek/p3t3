@@ -1,13 +1,16 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model, Document, Types } from 'mongoose';
+// import { IDeck } from './Deck.js';
 import bcrypt from 'bcrypt';
 
 // Define an interface for the Profile document
-interface IProfile extends Document {
+export interface IProfile extends Document {
   _id: string;
   name: string;
+  username: string;
   email: string;
   password:string;
-  skills: string[];
+  decks: Types.ObjectId[];
+  favorites:  Types.ObjectId[];
   isCorrectPassword(password: string): Promise<boolean>;
 }
 
@@ -24,19 +27,32 @@ const profileSchema = new Schema<IProfile>(
       type: String,
       required: true,
       unique: true,
+      lowercase: true,
       match: [/.+@.+\..+/, 'Must match an email address!'],
+    },
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
     },
     password: {
       type: String,
       required: true,
       minlength: 5,
     },
-    skills: [
-      {
-        type: String,
-        trim: true,
-      },
+    decks: [
+        {
+        type: Schema.Types.ObjectId,
+        ref: "Decks"
+      }
     ],
+    favorites: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Flashcard"
+      }
+    ]
   },
   {
     timestamps: true,
@@ -46,12 +62,12 @@ const profileSchema = new Schema<IProfile>(
 );
 
 // set up pre-save middleware to create password
-profileSchema.pre<IProfile>('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+profileSchema.pre<IProfile>('save', async function(next) {
+  if (this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
+    console.log(`Password hashed for user ${this.name}`);
   }
-
   next();
 });
 

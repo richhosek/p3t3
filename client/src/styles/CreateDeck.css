@@ -1,0 +1,149 @@
+.title {
+text-align: center;
+  font-size: 60px;
+  color: black;
+  margin-top: 30px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+}
+.form-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary-color); /* Matches your theme */
+  margin-bottom: 30px;
+}
+
+.bigform-container{
+  background-color: rgb(63, 213, 247);
+}
+
+.form-field {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px rgba(238, 185, 2, 0.3);
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: vertical; /* Allows vertical resize only */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit; /* Match the rest of the form's font */
+  line-height: 1.5;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px rgba(238, 185, 2, 0.3);
+}
+
+.buttonfield {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.dark{
+  .title {
+    color: black;
+  }
+  
+  .form-title {
+    color:black;
+  }
+  
+  .bigform-container{
+    background-color: rgb(72, 72, 71);
+  }
+
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .form-container {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .create-button,
+  .cancel-button {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .buttonfield {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .create-button,
+  .cancel-button {
+    width: 100%;
+    margin: 8px 0;
+  }
+}

@@ -1,2 +1,4 @@
 import Profile from './Profile.js';
-export { Profile };
+import Deck from './Deck.js';
+import Flashcard from './flashcard.js';
+export { Profile, Deck, Flashcard };

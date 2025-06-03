@@ -1,43 +1,31 @@
-import { Link } from 'react-router-dom';
-import { type MouseEvent} from 'react';
-import Auth from '../../utils/auth';
-import "./Header.css"
+import { useState } from 'react';
+import "../../styles/Header.css"
+import 'semantic-ui-css/semantic.min.css';
 
 const Header = () => {
-  const logout = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    Auth.logout();
+ 
+
+  //darkmode button
+  const [darkMode, setDarkMode] = useState(() => {
+    // Initialize dark mode based on localStorage
+    return localStorage.getItem('darkMode') === 'true';
+  });
+
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    document.body.classList.toggle('dark', newDarkMode);
+    localStorage.setItem('darkMode', newDarkMode.toString());
   };
+
+
   return (
     <header>
-      <div>
-        <Link to="/">
-          <h1>
-            Project 3
-          </h1>
-        </Link>
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-              <Link to="/me">
-                View My Profile
-              </Link>
-              <button onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link to="/login">
-                Login
-              </Link>
-              <Link to="/signup">
-                Signup
-              </Link>
-            </>
-          )}
-        </div>
-      </div>
+      <button onClick={toggleDarkMode}>
+          <i className={`${darkMode ? 'moon icon' : 'sun icon'}`}></i>
+        </button>
+      <h1>StudyQuest</h1>
+    
     </header>
   );
 };

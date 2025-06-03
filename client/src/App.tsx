@@ -1,4 +1,4 @@
-// import './App.css';
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -7,12 +7,19 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
-
 import Header from './components/Header';
+import NavigationBar from './components/Nav/index';
 import Footer from './components/Footer';
+import { AuthProvider } from './utils/authContext';
+
+
+
+
+
+
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+   uri: (import.meta as any).env.VITE_GRAPHQL_URI || '/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -28,6 +35,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+
 const client = new ApolloClient({
   // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
   link: authLink.concat(httpLink),
@@ -36,15 +44,17 @@ const client = new ApolloClient({
 
 function App() {
   return (
+        <AuthProvider>
     <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-        <div className="container">
-          <Outlet />
-        </div>
-        <Footer />
-      </div>
+      <Header />
+      <NavigationBar />
+      {/* This will render the matched child route from main.tsx routing */}
+      <Outlet />
+      <Footer />
     </ApolloProvider>
+
+        </AuthProvider>
+
   );
 }
 

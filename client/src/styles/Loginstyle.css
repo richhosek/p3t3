@@ -1,0 +1,31 @@
+.grid{
+    padding: 5px;
+    h4{
+        font-size: 25px;
+        color:black;
+    }
+}
+
+.ui.form .field>label{
+     font-size: 18px;
+}
+.ui.form .field .ui.input input{
+    font-size: 15px;
+    }
+/* about page */
+.about{
+    img{
+        width: 50px;
+        height: 55px;
+        border-radius: 50%;
+    }
+}
+.dark{
+.ui.inverted.blue.segment{
+    background-color: rgb(72, 72, 71) !important;
+    }
+.ui.violet.button {
+   background-color: yellow;
+   color:black;
+}
+}

@@ -4,22 +4,40 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "start:dev": "concurrently \"cd server && npm run watch\" \"wait-on tcp:3001 && cd client && npm run dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run client:build && npm run server",
+    "start:dev": "concurrently \"npm run server:dev\" \"wait-on tcp:3001 && npm run client:dev\"",
     "server": "cd server && npm start",
     "server:dev": "cd server && npm run dev",
     "install": "cd server && npm i && cd ../client && npm i",
     "client:build": "cd client && npm run build",
     "client:dev": "cd client && npm run dev",
-    "seed": "cd server && npm run build && npm run seed",
     "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
+    "seed": "cd server && npm run build && npm run seed",
+    "brain": "cd server && npm run build && npm run seed",
     "render-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "concurrently": "^8.2.2",
+    "typescript": "^5.8.3",
     "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "cors": "^2.8.5",
+    "framer-motion": "^12.14.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }

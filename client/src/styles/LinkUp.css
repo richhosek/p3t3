@@ -1,0 +1,391 @@
+/* LineMatchingGame.css */
+
+.linkup-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.linkup-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.linkup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.linkup-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Game Stats */
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 100px;
+}
+
+.stat-item-blue {
+  background-color: #eff6ff;
+}
+
+.stat-item-green {
+  background-color: #f0fdf4;
+}
+
+.stat-item-purple {
+  background-color: #faf5ff;
+}
+
+.stat-item-orange {
+  background-color: #fff7ed;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value-blue {
+  color: #2563eb;
+}
+
+.stat-value-green {
+  color: #16a34a;
+}
+
+.stat-value-purple {
+  color: #9333ea;
+}
+
+.stat-value-orange {
+  color: #ea580c;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+}
+
+.stat-label-blue {
+  color: #1d4ed8;
+}
+
+.stat-label-green {
+  color: #15803d;
+}
+
+.stat-label-purple {
+  color: #7c3aed;
+}
+
+.stat-label-orange {
+  color: #c2410c;
+}
+
+/* Controls */
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.control-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-clear {
+  background-color: #eab308;
+  color: white;
+}
+
+.btn-clear:hover {
+  background-color: #ca8a04;
+}
+
+.btn-reset {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #2563eb;
+}
+
+/* Game Completed Message */
+.game-completed {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.completed-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Game Area */
+.game-area {
+  position: relative;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  min-height: 400px;
+}
+
+.game-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.game-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  min-height: 400px;
+}
+
+/* Columns */
+.terms-column,
+.definitions-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.column-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Game Items */
+.game-item {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.game-item-default {
+  background-color: white;
+  border-color: #d1d5db;
+}
+
+.game-item-default:hover {
+  border-color: #60a5fa;
+  background-color: #eff6ff;
+}
+
+.game-item-correct {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #15803d;
+}
+
+.game-item-incorrect {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.term-text {
+  font-weight: 600;
+  text-align: center;
+}
+
+.definition-text {
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Instructions */
+.instructions {
+  margin-top: 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.instructions-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .linkup-container {
+    padding: 1rem;
+  }
+
+  .game-stats {
+    gap: 1rem;
+  }
+
+  .stat-item {
+    padding: 0.75rem;
+    min-width: 80px;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .game-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .game-item {
+    padding: 0.75rem;
+  }
+
+  .term-text,
+  .definition-text {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .linkup-title {
+    font-size: 1.5rem;
+  }
+
+  .game-controls {
+    gap: 0.5rem;
+  }
+
+  .control-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .game-area {
+    padding: 1rem;
+  }
+
+  .game-item {
+    padding: 0.5rem;
+  }
+}
+
+/* Animation for successful connections */
+@keyframes connectionSuccess {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.game-item-correct {
+  animation: connectionSuccess 0.3s ease-in-out;
+}
+
+/* Animation for incorrect connections */
+@keyframes connectionError {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.game-item-incorrect {
+  animation: connectionError 0.3s ease-in-out;
+}
+
+/* Loading and Error States */
+.loading-state,
+.error-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+.error-state {
+  color: #dc2626;
+}
+
+/* Accessibility */
+.game-item:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.control-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .game-item {
+    border-width: 3px;
+  }
+  
+  .game-item-default:hover {
+    background-color: #dbeafe;
+    border-color: #2563eb;
+  }
+  
+  .game-item-correct {
+    background-color: #dcfce7;
+    border-color: #16a34a;
+  }
+  
+  .game-item-incorrect {
+    background-color: #fee2e2;
+    border-color: #dc2626;
+  }
+}
+
+/* Print styles */
+@media print {
+  .game-controls {
+    display: none;
+  }
+  
+  .game-svg {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}

@@ -1,0 +1,128 @@
+.bigform-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.468);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.form-subtitle {
+  font-size: 0.9rem;
+  color: #07124c84;
+}
+
+.form {
+  width: 100%;
+}
+
+
+.form-create {
+  color: #EEB902;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; 
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px rgba(238, 185, 2, 0.3);
+}
+
+.buttonfield {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.create-button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-button:hover {
+  background-color: #eebb0274;
+  transform: translateY(-2px);
+}
+
+
+
+.flashcard-list {
+  margin-top: 2rem;
+}
+
+.flashcard-item {
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  background-color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flashcard-item:hover {
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.flashcard-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flashcard-text {
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  line-height: 1.5;
+  color: #1f2937;
+  background-color: #f0f4f8;
+}

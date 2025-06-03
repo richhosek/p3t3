@@ -1,0 +1,242 @@
+[
+    {
+        "term": "JavaScript",
+        "definition": "A programming language that adds dynamic functionality and complex features to web pages.",
+        "example": "const x = 5; console.log(x);",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "TypeScript",
+        "definition": "A superset of JavaScript that adds static typing.",
+        "example": "const x: number = 5; console.log(x);",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "React",
+        "definition": "A JavaScript library for building user interfaces.",
+        "example": "<div>Hello, World!</div>",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Node.js",
+        "definition": "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
+        "example": "const http = require('http');",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Boolean",
+        "definition": "A data type that can hold one of two values: true or false.",
+        "example": "let isActive: boolean = true;",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Array",
+        "definition": "A data structure that can hold multiple values.",
+        "example": "let numbers: number[] = [1, 2, 3];",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Function",
+        "definition": "A block of code designed to perform a particular task.",
+        "example": "function greet(name: string): string { return `Hello, ${name}`; }",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "If Statement",
+        "definition": "A control structure that executes a block of code if a specified condition is true.",
+        "example": "if (x > 10) { console.log('x is greater than 10'); }",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "For Loop",
+        "definition": "A control structure that repeats a block of code a specified number of times.",
+        "example": "for (let i = 0; i < 5; i++) { console.log(i); }",
+        "deck": "JavaScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Union Types",
+        "definition": "A variable that can be assigned more than on type",
+        "example": "let age: number | string = 25; age = '25';",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Objects",
+        "definition": "s a composite data type that represents a collection of key-value pairs, where keys are strings (or symbols) and values can be of any data type",
+        "example": " { name: string; age: number;",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Class",
+        "definition": "defines the state of behaviour of objects.",
+        "example": "",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Interfaces",
+        "definition": "defines a contract for an object's or class's structure",
+        "example": "Person {  name: string;   age: number;   email: string; }",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "any",
+        "definition": "a type that disables type checking and effectively allows all types to be used",
+        "example": "let v: any = true; v = 5; v = 'hello';",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "unknown",
+        "definition": "a type that is safer than any because it requires type checking before performing operations on it",
+        "example": "let v: unknown; v = 5; if (typeof v === 'number') { console.log(v + 1); }",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "never",
+        "definition": "a type that represents values that don't occur",
+        "example": "function error(message: string): never { throw new Error(message); }",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Explicit Type",
+        "definition": "writing out the type",
+        "example": " let name: string = 'John';",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Implicit Type",
+        "definition": "TypeScript will guess the type, based on the assigned value",
+        "example": "let firstName = Dylan;",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Primitive Types",
+        "definition": "The most basic data types in TypeScript.",
+        "example": "string, number, boolean, null, undefined, symbol",
+        "deck": "TypeScript",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "CSS",
+        "definition": "A style sheet language used for describing the presentation of a document written in HTML or XML.",
+        "example": "h1 { color: blue; }",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Element Selector",
+        "definition": "A pattern used to select the elements you want to style.",
+        "example": "h2 { color: lightblue; }",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Class Selector",
+        "definition": "A selector that selects elements with a specific class.",
+        "example": ".className { color: red; }",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "ID Selector",
+        "definition": "A selector that selects an element with a specific ID.",
+        "example": "#idName { color: green; }",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Universal Selector",
+        "definition": "A selector that selects all elements.",
+        "example": "* { margin: 0; padding: 0; }",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Grouping Selector",
+        "definition": "A selector that groups multiple selectors together.",
+        "example": "h1, h2, h3 { color: blue; }",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "External CSS",
+        "definition": "A separate CSS file linked to an HTML document.",
+        "example": "<link rel='stylesheet' href='styles.css'>",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Internal CSS",
+        "definition": "CSS rules defined within a <style> tag in the HTML document.",
+        "example": "<style> h1 { color: blue; } </style>",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Pseudo-class ",
+        "definition": "used to define a special state of an element ",
+        "example": "a:hover {color: #FF00FF;}, a:active {color:0000FF;} ",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Z-Index",
+        "definition": "property specifies the stack order of an element.",
+        "example": "img { position: absolute;  z-index: -1;}",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    },
+    {
+        "term": "Flexbox",
+        "definition": "A one-dimensional layout method for arranging items in a row or column.",
+        "example": "display: flex; justify-content: center;",
+        "deck": "CSS",
+        "createdByUsername": "Admin",
+        "isFavorite": false
+    }
+]

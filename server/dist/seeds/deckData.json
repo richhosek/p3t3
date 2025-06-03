@@ -1,0 +1,23 @@
+[
+    {
+        "title": "JavaScript",
+        "description": "Helpful terms to know about JavaScript",
+        "createdByUsername": "Admin",
+        "isPublic": true,
+        "flashcards": []
+    },
+    {
+        "title": "TypeScript",
+        "description": "Helpful terms to know about TypeScript",
+        "createdByUsername": "Admin",
+        "isPublic": true,
+        "flashcards": []
+    },
+    {
+        "title": "CSS",
+        "description": "Helpful terms to know about CSS",
+        "createdByUsername": "Admin",
+        "isPublic": true,
+        "flashcards": []
+    }
+]

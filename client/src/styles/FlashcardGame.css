@@ -1,0 +1,612 @@
+/* StudyPage.css */
+
+/* Layout and Container Styles */
+.study-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.study-complete-container {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.loading-container, .error-container, .not-found-container, .no-cards-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-text {
+  color: #dc2626;
+}
+
+/* Header Styles */
+.study-header {
+  margin-bottom: 1.5rem;
+}
+
+.study-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.study-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-counter {
+  color: #6b7280;
+}
+
+.stats-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.stat-correct {
+  color: #16a34a;
+}
+
+.stat-incorrect {
+  color: #dc2626;
+}
+
+.stat-streak {
+  color: #9333ea;
+}
+
+/* Study Complete Styles */
+.complete-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.results-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.results-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  padding: 1rem;
+  border-radius: 0.375rem;
+}
+
+.stat-card-green {
+  background-color: #f0fdf4;
+}
+
+.stat-card-red {
+  background-color: #fef2f2;
+}
+
+.stat-card-blue {
+  background-color: #eff6ff;
+}
+
+.stat-card-purple {
+  background-color: #faf5ff;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-number-green {
+  color: #16a34a;
+}
+
+.stat-number-red {
+  color: #dc2626;
+}
+
+.stat-number-blue {
+  color: #2563eb;
+}
+
+.stat-number-purple {
+  color: #9333ea;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+}
+
+.stat-label-green {
+  color: #15803d;
+}
+
+.stat-label-red {
+  color: #b91c1c;
+}
+
+.stat-label-blue {
+  color: #1d4ed8;
+}
+
+.stat-label-purple {
+  color: #7c3aed;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Study Mode Selector */
+.mode-selector {
+  margin-bottom: 1.5rem;
+}
+
+.mode-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mode-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mode-button-active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.mode-button-inactive {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.mode-button-inactive:hover {
+  background-color: #d1d5db;
+}
+
+.mode-button-disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Progress Bar */
+.progress-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.5rem;
+}
+
+.progress-fill {
+  background-color: #2563eb;
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: width 0.3s;
+}
+
+/* Flashcard Styles */
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 24rem;
+  height: 16rem;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+ 
+}
+
+.card-front {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.card-back {
+  background: linear-gradient(135deg, #10b981, #059669);
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-label {
+  color: white;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  opacity: 0.75;
+}
+
+.card-text {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.card-instruction {
+  color: white;
+  font-size: 0.875rem;
+  opacity: 0.75;
+}
+
+/* Answer Buttons */
+.answer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.answer-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.answer-incorrect {
+  background-color: #dc2626;
+}
+
+.answer-incorrect:hover {
+  background-color: #b91c1c;
+}
+
+.answer-correct {
+  background-color: #16a34a;
+}
+
+.answer-correct:hover {
+  background-color: #15803d;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.nav-button-gray {
+  background-color: #4b5563;
+}
+
+.nav-button-gray:hover:not(:disabled) {
+  background-color: #374151;
+}
+
+.nav-button-light-gray {
+  background-color: #6b7280;
+}
+
+.nav-button-light-gray:hover {
+  background-color: #4b5563;
+}
+
+/* Primary Buttons */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #b91c1c;
+}
+
+.btn-tertiary {
+  background-color: #4b5563;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-tertiary:hover {
+  background-color: #374151;
+}
+
+/* Additional CSS to fix flashcard display issues */
+/* Add this to your FlashcardGame.css file */
+
+/* Ensure proper 3D transform context */
+.card-container {
+  perspective: 1000px;
+  perspective-origin: center center;
+}
+
+.card-wrapper {
+  transform-style: preserve-3d;
+}
+
+.card {
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Force proper positioning and visibility */
+.card-face {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Ensure front face is visible by default */
+.card-front {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  transform: rotateY(0deg) !important;
+  z-index: 2;
+}
+
+/* Ensure back face is hidden by default */
+.card-back {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  transform: rotateY(180deg) !important;
+  z-index: 1;
+}
+
+/* Ensure text content is visible and properly styled */
+.card-content {
+  text-align: center !important;
+  z-index: 10 !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.card-text {
+  color: white !important;
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  margin: 1rem 0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  word-wrap: break-word !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+
+.card-label {
+  color: white !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 1rem !important;
+  opacity: 0.9 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  display: block !important;
+}
+
+.card-instruction {
+  color: white !important;
+  font-size: 0.875rem !important;
+  opacity: 0.8 !important;
+  font-weight: 400 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  margin-top: 1rem !important;
+  display: block !important;
+}
+
+/* Ensure proper contrast and visibility */
+.card-face * {
+  color: white !important;
+}
+
+/* Remove any conflicting styles */
+.card-face .card-content * {
+  background: none !important;
+  border: none !important;
+}
+
+/* Debug styles - REMOVE these once text is visible */
+.card-face {
+  border: 3px solid red !important; /* Temporary - remove once working */
+}
+
+.card-front {
+  border-color: blue !important; /* Temporary - remove once working */
+}
+
+.card-back {
+  border-color: green !important; /* Temporary - remove once working */
+}
+
+.card-text {
+  border: 1px solid yellow !important; /* Temporary - remove once working */
+  background: rgba(255, 255, 255, 0.1) !important; /* Temporary - remove once working */
+}
+
+/* Fallback for any missing text */
+.card-text:empty::before {
+  content: "No text available" !important;
+  color: white !important;
+  font-style: italic !important;
+}
+
+
+@media (max-width: 575px) {
+  .study-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .card-wrapper {
+    width: 90vw;
+    max-width: 300px;
+    height: 200px;
+  }
+  
+  .card-text {
+    font-size: 1rem !important;
+  }
+  
+  .card-label {
+    font-size: 0.7rem !important;
+  }
+  
+  .answer-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .answer-button {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  
+  .mode-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mode-button {
+    width: 100%;
+  }
+}

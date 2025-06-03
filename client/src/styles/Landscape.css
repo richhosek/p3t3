@@ -1,0 +1,18 @@
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .study-container {
+    padding: 0.5rem;
+  }
+  
+  .card-wrapper {
+    height: 120px;
+  }
+  
+  .crossword-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .clues-panel {
+    max-height: 200px;
+  }
+}
