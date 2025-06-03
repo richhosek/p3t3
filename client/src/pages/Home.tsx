@@ -11,7 +11,7 @@ import {
   useRef 
 } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import '../styles/Home.css';
+import '../styles/home.css';
 import SelectDeck from '../components/SelectDeck';  
 
 interface Profile {
